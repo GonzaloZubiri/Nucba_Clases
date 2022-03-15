@@ -1,0 +1,74 @@
+
+/* Para hacer un reseteo de toda la página se le saca el margen, padding y borde */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    font-size: 100px;
+    color: lightcoral;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.tardis {
+    font-size: 40px;
+    color: lightyellow;
+    background-color: lightseagreen;
+    text-align: center;
+}
+
+.doctores {
+    font-size: 30px;
+    color: lightsteelblue;
+    background-color: darkolivegreen;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.tomate {
+    background-color: tomato;
+    color: white;
+}
+
+.naranja {
+    background-color: orange;
+    color: white;
+}
+
+.azularcoiris {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.verdealga {
+    background-color: mediumseagreen;
+    color: white;
+}
+
+.gris {
+    background-color: gray;
+    color: white;
+}
+
+.azulmetalico {
+    background-color: slateblue;
+    color: white;
+}
+
+.violeta {
+    background-color: violet;
+    color: white;
+}
+
+.dorado {
+    background-color: gold;
+    color: white;
+}
