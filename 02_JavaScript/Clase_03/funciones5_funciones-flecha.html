@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Flecha</title>
+</head>
+<body>
+    <script>
+        // var sumar = () => {
+        //     var n1 = 25;
+        //     var n2 = 25;
+        //     var resultado = n1 + n2;
+        //     return resultado;
+        // }
+
+        // var resultado_sumar = sumar();
+        // console.log(resultado_sumar);
+
+
+        //Lo mismo que antes pero con parametros
+        // var sumar = (n1, n2) => {
+        //     // var n1 = 25;
+        //     // var n2 = 25;
+        //     var resultado = n1 + n2;
+        //     return resultado;
+        // }
+
+        // var resultado_sumar = sumar(25,25);
+        // console.log(resultado_sumar);
+
+
+        //Ejemplo de calcular y restar el IVA usando lo anterior...
+        var calcularIVA = (sueldo, iva = 21) => {
+            
+            var resultado = sueldo * (iva / 100);
+            var sueldo_menos_iva = sueldo - resultado
+            return sueldo_menos_iva;
+        }
+
+        var resultado_sumar = calcularIVA(100000);
+        console.log('Sueldo sin IVA:',resultado_sumar);
+    </script>
+    
+</body>
+</html>
