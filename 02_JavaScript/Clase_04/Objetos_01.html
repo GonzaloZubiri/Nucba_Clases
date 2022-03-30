@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos</title>
+  </head>
+  <body>
+    <script>
+      class Robot {
+        constructor(color, posicionX, posicionY) {
+          this.color = color;
+          this.posicionX = posicionX;
+          this.posicionY = posicionY;
+        }
+        desplazar = function (X, Y) {
+          this.posicionX = X;
+          this.posicionY = Y;
+        };
+        posicion = function () {
+          console.log(
+            "Robot " +
+              this.color +
+              " en X: " +
+              this.posicionX +
+              " en Y: " +
+              this.posicionY
+          );
+        };
+      }
+
+      var robot1 = new Robot("Verde", 10, 10);
+      var robot2 = new Robot("Naranja", 5, 5);
+      var robot3 = new Robot("Celeste", 0, 0);
+
+      robot1.posicion();
+      robot1.desplazar(50, 50);
+      robot1.posicion();
+      robot2.posicion();
+      robot3.posicion();
+      robot3.desplazar(25, 10);
+      robot3.posicion();
+
+    </script>
+  </body>
+</html>

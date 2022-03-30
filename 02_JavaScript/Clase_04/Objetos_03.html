@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    
+    <script>
+        class Auto {
+            constructor(marca, modelo, anioActual, anioAntiguedad){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.anioActual = anioActual;
+                this.anioAntiguedad = anioAntiguedad;
+            }
+            arrancar = function(){
+                return 'El auto arranco';
+            };
+            getMarca = function(){
+                return this.marca;
+            };
+            getAnio = function(){
+                return this.anioActual;
+            };
+            calcularAntiguedad = function(){
+                let antiguedad = this.anioActual - this.anioAntiguedad;
+                return "La antiguedad del auto es: " + antiguedad;
+            };
+        }
+
+        var miAuto = new Auto("Fiat", "Cronos", 2022, 2021);
+
+        miAuto.arrancar();
+        
+        miAuto.getMarca();
+
+        miAuto.calcularAntiguedad();
+
+
+
+
+    </script>
+</body>
+</html>
