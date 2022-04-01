@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replace</title>
+  </head>
+  <body>
+    <script>
+      var miChocolate = "Milka de color negro y sabor a negro";
+      var resultado = miChocolate.replace("negro", "blanco");
+      /*Reemplaza solo la primera palabra que encuentra con la que le estoy pasando*/
+      console.log(resultado);
+
+      var miChocolate = "Milka de color negro y sabor a negro";
+      var resultado = miChocolate.replaceAll("negro", "blanco");
+      /*reemplaza todas las palabras que encuentra con la que le estoy pasando*/
+      console.log(resultado);
+    </script>
+  </body>
+</html>
