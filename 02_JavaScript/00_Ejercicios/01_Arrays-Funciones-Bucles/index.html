@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 01</title>
+</head>
+<body>
+    <!-- 👉 Crear un array con, al menos, 10 ingredientes para hacer pizzas 🍕 (puede ser tanto masa como los ingredientes que van sobre la base).
+
+👉 Crear una función que acepte ese array como parámetro. 
+
+Dentro de la función, debemos lograr lo siguiente: 
+👉 Iterar ese array para lograr que, los ingredientes que tengan una cantidad par de letras, vayan a un array llamado "pares". 
+👉 Hacer lo mismo con los impares, enviándolos al array "impares". 
+👉 Imprimir en consola:  "Los ingredientes pares son: (ingredientes en array pares). 
+Los ingredientes impares son: (ingredientes en array impares)." -->
+
+
+    <script>
+        // Array con los ingredientes
+        const pizzaIngredientes = ["harina", "agua", "levadura", "salsa", "queso", "jamon", "huevos", "aceitunas", "oregano", "tomate" ]
+
+        //Muestro el array (ingredientes) por consola
+        console.log(pizzaIngredientes);
+
+        //Crear una función que acepte ese array como parámetro
+        function Pizza(pizzaIngredientes) {
+            //Creo nuevos arrays para los "pares" e "impares"
+            let ingredientesPares = [];
+            let ingredientesImpares = [];
+
+            for (let i = 0; i < pizzaIngredientes.length; i++) {
+                //Recorre la función para determinar cantidad de letras de cada ingrediente
+                const ingrediente = pizzaIngredientes[i].length;
+                
+                //Define que si el resto de la cant de letras % 2 es igual a "0", lo tome como un ingrediente par (ingredientesPares), utilizando "push" para que nos devuelva la longitud del array
+                if (ingrediente % 2 == 0) {
+                    ingredientesPares.push(pizzaIngredientes[i]);
+                } else {
+                    //En caso contrario, lo guarda como un ingrediente impar (ingredientesImpares)
+                    ingredientesImpares.push(pizzaIngredientes[i]);
+                }
+            }
+
+            console.log("Los ingredientes pares son: " + ingredientesPares);
+            console.log("Lis ingredientes impares son: " + ingredientesImpares);
+        }
+
+        //Declaro la funcion
+        Pizza(pizzaIngredientes);
+
+    </script>
+</body>
+</html>
