@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <script>
+        function saludar (nombre, nombre2, nombre3){
+            console.log("Hola", nombre);
+            console.log("Chau", nombre2);
+            console.log("Adios", nombre3);
+        }
+
+        function despedir(nombre) {
+            console.log("Nos vemos", nombre);
+        }
+
+        function procesarSaludo(fn, callback){
+            fn("Gonzalo", "fernando", "Carlos");
+            callback("Carolina");
+        }
+
+        procesarSaludo(saludar, despedir);
+
+        // saludar();
+
+
+
+    </script>
+</body>
+</html>

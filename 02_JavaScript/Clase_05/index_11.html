@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Slice</title>
 </head>
 <body>
     <script>
@@ -25,6 +25,15 @@
 
         console.log(animals.slice());        
         // expected output: Array ['ant', 'bison', 'camel', 'duck', 'elephant']
+
+
+
+        //OJO EL "SLICE" TOMA LA "POSICION" QUE EMPIEZA EN EL 1 EN ADELANTE, EL "INDICE" COMIENDA DESDE EL 0 EN ADELANTE
+        //OTRO EJEMPLO
+        var nombres = ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'];
+        var masculinos = nombres.slice(1, 3);
+
+        console.log(masculinos);
     </script>
     
 </body>
