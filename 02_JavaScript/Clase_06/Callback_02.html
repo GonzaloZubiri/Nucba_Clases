@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Displayer(some){
+            console.log(some);
+        }
+
+        function myCalculator(num1, num2, callback){
+            let sum = num1 + num2;
+            callback(sum);
+        }
+
+        myCalculator(5, 5, Displayer);
+
+
+        //Se puede usar el nombre "CALLBACK" o "FN"
+
+
+        //OTRO EJEMPLO SENCILLO
+        function callback(){
+            console.log("Yo soy un callback");
+        }
+
+        function message(fn) {
+            fn();
+        }
+
+        message(callback);
+        
+
+    </script>
+</body>
+</html>
