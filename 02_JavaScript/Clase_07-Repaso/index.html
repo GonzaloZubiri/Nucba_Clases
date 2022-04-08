@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repaso</title>
+  </head>
+  <body>
+    <script>
+      //Nueva forma de armar "objetos"
+
+      const personas = [
+        { id: 0, name: "Ariel", lastname: "Ramirez" },
+        { id: 1, name: "Nico", lastname: "Garcia" },
+        { id: 2, name: "Vale", lastname: "Perez" },
+      ];
+      // console.log(personas.length);
+
+      // for (let i = 0; i < personas.length; i++) {
+      //   console.log(
+      //     "El id es:",
+      //     personas[i].id,
+      //     "El nombre es:",
+      //     personas[i].name,
+      //     "y su apellido es:",
+      //     personas[i].lastname
+      //   );
+      // }
+
+      console.log(
+        personas.map((p) => {
+          return `id: ${p.id} apellido: ${p.lastname}, nombre ${p.name}`;
+        })
+      ); 
+
+
+
+
+      // var numbers = [1, 5, 10, 15];
+      // var doubles = numbers.map((x) => {
+      //     return x *2;
+      // });
+      // console.log(doubles);
+
+      //     let newDoubles = [];
+      // for (let i = 0; i < numbers.length; i++) {
+      //     var doubles = numbers[i] * 2;
+      //     newDoubles.push(doubles);
+      // }
+
+      // console.log(newDoubles);
+    </script>
+  </body>
+</html>
