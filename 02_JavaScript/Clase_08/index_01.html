@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 class="titulo_primero" id="titulo_mundo">Hola Mundo</h1>
+    <h2>Como estas?</h2>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+      exercitationem nesciunt hic facere debitis error consequatur assumenda
+      iste nemo praesentium excepturi fugiat facilis quia alias delectus quas
+      ratione in nihil?
+    </p>
+    <p>Otra cosa</p>
+    <p>Otra cosa</p>
+    <p>Otra cosa</p>
+    <h1 id="titulo_mundo">Hola Mundo</h1>
+  </body>
+</html>
+
+<style>
+    .parrafo {
+        color: blue;
+    }
+
+    .titulo_primero {
+        color: brown;
+    }
+
+</style>
+
+
+<script>
+    // var titulo = document.getElementById("titulo_mundo_primero");
+    // titulo.innerHTML = '<p>Chau Mundo</p>'
+
+
+    // var titulos = document.getElementsByTagName("h1");
+    // titulos[1].innerText = 'Chau Mundo';
+    // titulos[0].innerText = 'Bienvenidos a Nucba';
+
+
+    // var titulos2 = document.querySelectorAll("#titulo_mundo") 
+
+
+    var parrafos = document.querySelectorAll("p") 
+    parrafos[3].className += 'parrafo';
+    parrafos[1].classList.add('parrafo');
+    parrafos[2].addEventListener("click", function (){console.log('click en elemento')});
+    
+
+</script>
