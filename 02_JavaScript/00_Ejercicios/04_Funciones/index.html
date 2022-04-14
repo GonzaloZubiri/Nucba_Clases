@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funciones</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- -Crear una función que imprima en consola el resultado de la suma de   num1 y num2. 
          -Crear una función que reciba dos números como parámetros e imprima en consola la suma de ambos números. 
          -Realizar ambos ejercicios con funciones regulares y arrow functions. 
@@ -14,6 +14,28 @@
 
          let num1 = 6 
          let num2 = 12  -->
-    
-</body>
+    <script>
+      // function sumar() {
+      //   let resultado = 0;
+      //   resultado = num1 + num2;
+      //   console.log("La suma de ", num1, " + ", num2, "es: ", resultado);
+      //   console.log("El resultado de la suma es: ", resultado);
+      // }
+
+      // let num1 = 6;
+      // let num2 = 12;
+      // sumar();
+      
+
+      var sumar = () => {
+        let num1 = 6;
+        let num2 = 12;
+        let resultado = num1 + num2;
+        return resultado;
+      };
+
+      let resultado_sumar = sumar();
+      console.log("El resultado de la suma es: ", resultado_sumar);
+    </script>
+  </body>
 </html>

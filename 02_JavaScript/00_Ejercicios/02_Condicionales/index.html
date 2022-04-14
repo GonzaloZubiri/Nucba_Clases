@@ -12,7 +12,21 @@
          -Crear otro condicional que imprima en consola "y tengo menos de 25 años" si tu edad esta entre los 18 y los 25. Caso contrario, que imprima "y tengo mas de 25 años". -->
     
     <script>
-        var edad = "34";
+        let edad = "25";
+
+        if (edad < 18) {
+            console.log("Soy menor de edad");
+        } else {
+            console.log("Soy mayor de edad");
+        }
+
+        if (edad >= 18 && edad < 25) {
+            console.log("y tengo menos de 25 años");
+        } else if (edad >= 25) {
+            console.log("y tengo mas de 25 años");
+        }
+            
+        
         
     </script>
 </body>
