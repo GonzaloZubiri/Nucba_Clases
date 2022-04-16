@@ -13,5 +13,32 @@
         acepte 3 parámetros. Los primeros dos, tienen que ser números, el tercero,
         la función creada anteriormente. Esta nueva función, debe retornar (también)
         el resultado de la multiplicación. -->
+
+    <script>
+      function mostrarResultado(resultado) {
+        console.log("El resultado es:", resultado);
+      }
+
+      function multiplicar(n1, n2, fn) {
+        let res = n1 * n2;
+        fn(res);
+      }
+
+      multiplicar(5, 7, mostrarResultado);
+      
+
+
+      // FALTA TERMINAR
+      function resultadoFinal(resultado2) {
+        console.log("El resultado es: ", resultado2)
+      }
+
+      function calcular(num1, num2, multiplicar, fn) {
+        let res2 = (num1 * num2) + multiplicar ;
+        fn(res2);
+      }
+
+      calcular(5, 6, multiplicar);
+    </script>
   </body>
 </html>

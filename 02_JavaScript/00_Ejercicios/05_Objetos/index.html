@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Objetos</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- -Crear la clase constructora "Zapatillas". Debe aceptar como parámetros Marca, color y talle. 
          -Crear, como mínimo, 5 objetos con esta clase. 
          -Crear una función que acepte como parámetro un objeto. Esa función debe imprimir en consola la marca, el color y el talle del objeto que le pasamos. 
          -La impresión en consola debe ser friendly para el usuario, no solo los datos sueltos. -->
-         
+
     <script>
-        class Zapatillas {
-            constructor(marca, color, talle){
-                this.marca = marca;
-                this.color = color;
-                this.talle = talle;
-            }
-        }
+      //Creo la clase constructora "Zapatillas"
+      class Zapatillas {
+        constructor(marca, color, talle) {
+          this.marca = marca;
+          this.color = color;
+          this.talle = talle;
+        };
+
+        //Creo la función y la imprimo por consola
+        tipoZapatilla = function() {
+            console.log("La zapatilla es de marca: " + this.marca + ", es de color" + this.color + "y el talle es:" + this.talle);
+        };     
+    
+      };
+    
+      let Zapatilla2 = new Zapatillas("Nike", "Blanca", 37);
+      let Zapatilla3 = new Zapatillas("Fila", "Roja", 38);
+      let Zapatilla1 = new Zapatillas("Adidas", "Negro", 39);
+      let Zapatilla4 = new Zapatillas("Diadora", "Azul", 40);
+      let Zapatilla5 = new Zapatillas("Topper", "Verde", 41);
+
+      
     </script>
-</body>
+  </body>
 </html>
