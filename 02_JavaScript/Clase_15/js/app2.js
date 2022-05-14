@@ -7,15 +7,43 @@ const aplicarDescuento = new Promise((resolve, reject) => {
     }
 })
 
-aplicarDescuento
-    .then(res => {
-        console.log(res);
-    })
-    .catch(error => {
-        console.error(error);
-    })
+// aplicarDescuento
+//     .then(res => {
+//         console.log(res);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     })
 
     
+/* Segundo metodo */
+const insertParagraph = (res) => {
+    const $h1 = document.querySelector("body > h1")
+    const $p = document.createElement("p");
+    $p.id = "p-message";
+    $p.textContent = `Se realizo ${res}`;
+    $h1.insertAdjacentElement("afterend", $p);
+}
+
+
+aplicarDescuento
+    .then(res => {
+        insertParagraph(res)
+    })
+    .catch(error => {
+        insertParagraph(error);
+
+    })
+
+
+/*
+Primer Metodo
+function mostrarHTML(texto) {
+    const aviso = document.querySelector("#promesa")
+    const parrafo = document.createElement('p')
+    parrafo.textContent = texto
+    aviso.appendChild(parrafo)
+} */
 
 /* Crear con Javascript un código para que se pueda mostrar en el DOM la info que devuelve la promesa */
 
