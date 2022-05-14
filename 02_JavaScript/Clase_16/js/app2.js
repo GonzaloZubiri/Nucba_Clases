@@ -1,30 +1,27 @@
-const aplicarDescuento = new Promise((resolve, reject) => {
-    const dto = false
-    if (dto) {
-        resolve('Descuento aplicado')
-    } else {
-        reject('Descuento no aplicado')
-    }
-})
+const btnAbrirJson = document.querySelector("#abrirJSON")
+btnAbrirJson.addEventListener('click', obtenerDatos)
 
-aplicarDescuento
-    .then(res => {
-        console.log(res);
-    })
-    .catch(error => {
-        console.error(error);
-    })
+function obtenerDatos() {
+    const url = 'data/nombre.json'
 
-    
-
-/* Crear con Javascript un código para que se pueda mostrar en el DOM la info que devuelve la promesa */
+    fetch(url)
+        .then(res => res.json())
+        .then(datos => mostrarHTML(datos))
+}
 
 
-/* console.log(aplicarDescuento);*/
+function mostrarHTML({ name, username, phone, address: { city } }) {
+    /* const { name, username, phone, address: { city } } = nombre */
+    /* console.log(nombre); */
+    const body = document.querySelector("body")
+    const div = document.createElement('div')
 
-//Existen 3 estados de las promesas
-/* 
-fulfilled -> Cuando la promesa se cumplió
-rejected -> Cuando la promesa no se cumplió
-pending -> Cuando queda en pendiente
-*/
+    div.innerHTML = `
+    <div class='nombre'>Nombre: ${name} </div>
+    <div class='nombre'>Usuario: ${username} </div>
+    <div class='nombre'>Dirección: ${city} </div>
+    <div class='nombre'>Telefono: ${phone} </div>
+    `
+
+    body.appendChild(div)
+} 
